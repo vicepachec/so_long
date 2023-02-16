@@ -6,7 +6,7 @@
 /*   By: vpacheco <vpacheco@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 17:39:43 by vpacheco          #+#    #+#             */
-/*   Updated: 2023/02/15 16:45:07 by vpacheco         ###   ########.fr       */
+/*   Updated: 2023/02/16 15:49:10 by vpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	border_check(t_data *data)
 	int	i;
 
 	i = 0;
-	while (i < map_length(data->map) - 1)
+	while (i < map_length(data->map))
 	{
 		if (data->map[0][i] != '1' || data->map[map_height(data->map) \
 			- 1][i] != '1')
@@ -63,7 +63,7 @@ int	border_check(t_data *data)
 		i++;
 	}	
 	i = 1;
-	while (i < map_height(data->map) - 1)
+	while (i < map_height(data->map))
 	{
 		if (data->map[0][0] != '1')
 			print_error(1, "Invalid map", data);

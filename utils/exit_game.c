@@ -6,7 +6,7 @@
 /*   By: vpacheco <vpacheco@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 17:14:34 by vpacheco          #+#    #+#             */
-/*   Updated: 2023/01/11 15:05:39 by vpacheco         ###   ########.fr       */
+/*   Updated: 2023/02/16 16:11:37 by vpacheco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	exit_game(t_data *data)
 	int	i;
 
 	i = 0;
+	free_map(data->map);
 	if (data->img)
 	{
 		while (data->img[i])
